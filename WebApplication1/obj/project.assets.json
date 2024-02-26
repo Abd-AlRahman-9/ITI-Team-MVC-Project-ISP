@@ -8351,19 +8351,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Hager\\.nuget\\packages\\": {}
+    "C:\\Users\\ramad\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Hager\\Downloads\\ISP v2\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+      "projectUniqueName": "C:\\Users\\ramad\\Source\\Repos\\ITI-Team-MVC-Project-ISP\\WebApplication1\\WebApplication1.csproj",
       "projectName": "WebApplication1",
-      "projectPath": "C:\\Users\\Hager\\Downloads\\ISP v2\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
-      "packagesPath": "C:\\Users\\Hager\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Hager\\Downloads\\ISP v2\\WebApplication1\\WebApplication1\\obj\\",
+      "projectPath": "C:\\Users\\ramad\\Source\\Repos\\ITI-Team-MVC-Project-ISP\\WebApplication1\\WebApplication1.csproj",
+      "packagesPath": "C:\\Users\\ramad\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ramad\\Source\\Repos\\ITI-Team-MVC-Project-ISP\\WebApplication1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Hager\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ramad\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

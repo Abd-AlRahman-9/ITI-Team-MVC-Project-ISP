@@ -11,7 +11,7 @@ namespace WebApplication1.Models
 
         [ForeignKey("ServiceProvider")]
         public int ProviderId { get; set; }
-        public ServiceProvider? ServiceProvider { get; set; }
+        public InternetServiceProvider? ServiceProvider { get; set; }
         public List<Offer> Packages { get; set; } = new List<Offer>();
     }
 }

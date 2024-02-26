@@ -1,0 +1,28 @@
+﻿@* 
+
+<h1>packages</h1>
+<div style="background-color:antiquewhite">
+   <table>
+    <thead>
+        <tr>
+            <th>packageName: </th>
+                <th>packagetype: </th>
+                <th>price: </th>
+                <th>seviceProvider: </th>
+                
+          
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var result in Model)
+        {
+                <tr style="color:@result.Color;">
+                <td>@result.</td>
+                    <td>@result.</td>
+                    <td>@result.</td>
+                    <td>@result.ResultDegree</td>
+            </tr>
+        }
+    </tbody>
+    </table>
+ *@
