@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using System;
+using WebApplication1.Repos;
 using WebApplication1.Models;
 
 namespace WebApplication1
@@ -16,7 +17,7 @@ namespace WebApplication1
             builder.Services.AddControllersWithViews();
             builder.Services.AddDbContext<ISPContext>
                 (options => { options.UseSqlServer(builder.Configuration.GetConnectionString("ISP")); });
-
+            
             builder.Services.AddIdentity<ApplicationUser, IdentityRole>(option =>
             {
                 //option.Password.RequiredLength = 8;
@@ -26,7 +27,7 @@ namespace WebApplication1
 
             })
                 .AddEntityFrameworkStores<ISPContext>();
-
+            builder.Services.AddScoped<IServiceProviderRepo,ServiseProviderRepo>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

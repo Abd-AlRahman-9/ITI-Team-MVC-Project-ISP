@@ -21,4 +21,10 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Branches\" />
+    <Folder Include="Views\Employees\" />
+    <Folder Include="Views\Customers\" />
+  </ItemGroup>
+
 </Project>
