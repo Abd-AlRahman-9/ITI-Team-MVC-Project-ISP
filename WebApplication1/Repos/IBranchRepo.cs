@@ -8,6 +8,7 @@ namespace WebApplication1.Repos
         public List<Branch> GetAll();
         public Branch GetById(int id);
         public void Create(BranchViewModel _Branch);
+        public List<string> getGovernates();
         public Branch Update(int id,BranchViewModel _Branch);
         public void Delete(int id);
     }
