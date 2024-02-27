@@ -1,4 +1,6 @@
-﻿using WebApplication1.Models;
+﻿using Microsoft.AspNetCore.Mvc;
+using WebApplication1.Models;
+using WebApplication1.ViewModels;
 
 namespace WebApplication1.Repos
 {
@@ -15,13 +17,19 @@ namespace WebApplication1.Repos
 
         public Branch GetById(int id) => context.Branches.FirstOrDefault(B => B.Id == id);
 
-        public void Create(Branch _Branch)
+        public void Create(BranchViewModel _Branch)
         {
-            context.Branches.Add(_Branch);
+            Branch B = new Branch();
+            B.Address = _Branch.Address;
+            B.Fax = _Branch.Fax;
+            B.Name = _Branch.Name;  
+            B.ManagerName = _Branch.ManagerName;
+            B.Governate = _Branch.Governate;
+            context.Branches.Add(B);
             context.SaveChanges();
         }
 
-        public Branch Update(int Id, Branch _Branch)
+        public Branch Update(int Id,BranchViewModel _Branch)
         {
             Branch branch = context.Branches.Find(Id);
             branch.Name = _Branch.Name;
