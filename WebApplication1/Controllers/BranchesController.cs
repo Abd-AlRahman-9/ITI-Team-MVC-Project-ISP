@@ -21,7 +21,7 @@ namespace WebApplication1.Controllers
         [HttpGet]
         public IActionResult New()
         {
-            return View();
+            return View(BranchRepo.getGovernates());
         }
         [HttpPost]
         public IActionResult New(BranchViewModel B)

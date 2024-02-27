@@ -16,7 +16,7 @@ namespace WebApplication1.Repos
         public List<Branch> GetAll() => context.Branches.ToList();
 
         public Branch GetById(int id) => context.Branches.FirstOrDefault(B => B.Id == id);
-
+        public List<string> getGovernates () => context.Branches.Select(B => B.Governate).ToList();
         public void Create(BranchViewModel _Branch)
         {
             Branch B = new Branch();
