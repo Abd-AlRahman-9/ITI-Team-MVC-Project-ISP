@@ -37,6 +37,7 @@ namespace WebApplication1.Repos
             branch.Address = _Branch.Address;
             branch.ManagerName = _Branch.ManagerName;
             branch.Fax = _Branch.Fax;
+            context.Branches.Update(branch);
             context.SaveChanges();
             return branch;
         }
