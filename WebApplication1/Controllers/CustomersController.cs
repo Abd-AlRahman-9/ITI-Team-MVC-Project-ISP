@@ -19,9 +19,11 @@ namespace WebApplication1.Controllers
             return View();
         }
         [HttpGet]
-        public IActionResult New()
+        public IActionResult New(int? id)
         {
-            return View();
+            if(id==null)
+            return View(CustomerRepo.ServiceProvidorNames());
+            else return View(CustomerRepo.PackegesNames(id.Value));
         }
         [HttpPost]
         public IActionResult New(CustomerViewModel C)

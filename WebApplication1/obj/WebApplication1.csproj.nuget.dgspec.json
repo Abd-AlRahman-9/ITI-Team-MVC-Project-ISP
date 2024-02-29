@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\CM\\source\\repos\\ITI-Team-MVC-Project-ISP\\WebApplication1\\WebApplication1.csproj": {}
   },
   "projects": {
@@ -15,6 +16,22 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\CM\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+    "C:\\Users\\hp\\Desktop\\ISPSystem\\WebApplication1\\WebApplication1.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\hp\\Desktop\\ISPSystem\\WebApplication1\\WebApplication1.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\hp\\Desktop\\ISPSystem\\WebApplication1\\WebApplication1.csproj",
+        "projectName": "WebApplication1",
+        "projectPath": "C:\\Users\\hp\\Desktop\\ISPSystem\\WebApplication1\\WebApplication1.csproj",
+        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hp\\Desktop\\ISPSystem\\WebApplication1\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> dab10b3db535688181ee3807e4a96af56a55280e
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

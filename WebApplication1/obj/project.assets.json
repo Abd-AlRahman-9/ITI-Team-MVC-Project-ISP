@@ -8351,11 +8351,16 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\CM\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\hp\\.nuget\\packages\\": {}
+>>>>>>> dab10b3db535688181ee3807e4a96af56a55280e
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\CM\\source\\repos\\ITI-Team-MVC-Project-ISP\\WebApplication1\\WebApplication1.csproj",
       "projectName": "WebApplication1",
       "projectPath": "C:\\Users\\CM\\source\\repos\\ITI-Team-MVC-Project-ISP\\WebApplication1\\WebApplication1.csproj",
@@ -8364,6 +8369,16 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\CM\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+      "projectUniqueName": "C:\\Users\\hp\\Desktop\\ISPSystem\\WebApplication1\\WebApplication1.csproj",
+      "projectName": "WebApplication1",
+      "projectPath": "C:\\Users\\hp\\Desktop\\ISPSystem\\WebApplication1\\WebApplication1.csproj",
+      "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\hp\\Desktop\\ISPSystem\\WebApplication1\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> dab10b3db535688181ee3807e4a96af56a55280e
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8446,7 +8461,11 @@
       "code": "Undefined",
       "level": "Warning",
       "warningLevel": 1,
+<<<<<<< HEAD
       "message": "Problem reading the cache file C:\\Users\\CM\\source\\repos\\ITI-Team-MVC-Project-ISP\\WebApplication1\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+=======
+      "message": "Problem reading the cache file C:\\Users\\hp\\Desktop\\ISPSystem\\WebApplication1\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+>>>>>>> dab10b3db535688181ee3807e4a96af56a55280e
     }
   ]
 }

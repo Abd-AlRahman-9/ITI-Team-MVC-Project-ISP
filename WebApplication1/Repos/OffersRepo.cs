@@ -13,6 +13,8 @@ namespace WebApplication1.Repos
         }
         public List<Offer> GetAll()=> context.Offers.Include(offer => offer.Package).ToList();
         public Offer GetById(int id) => context.Offers.Include(offer => offer.Package).FirstOrDefault(offer => offer.Id == id);
+        
+        public List<string> getOffers () => context.Offers.Select(B => B.Name).ToList();
         public void Create(OffersViewModel offersView)
         {
             Offer offer = new Offer()
