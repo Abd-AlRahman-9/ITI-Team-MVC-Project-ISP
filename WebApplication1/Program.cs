@@ -29,7 +29,9 @@ namespace WebApplication1
                 .AddEntityFrameworkStores<ISPContext>();
             builder.Services.AddScoped<IServiceProviderRepo,ServiseProviderRepo>();
             builder.Services.AddScoped<IBranchRepo,BranchRepo>();
-            builder.Services.AddScoped<ICustomerRepo,CustomerRepo>();
+            builder.Services.AddScoped<IEmployeeRebo, EmployeeRebo>();
+            builder.Services.AddScoped<ICustomerRepo, CustomerRepo>();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
