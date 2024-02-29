@@ -1,83 +1,59 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using WebApplication1.Repos;
+using WebApplication1.ViewModels;
 
 namespace WebApplication1.Controllers
 {
     public class CustomersController : Controller
     {
+        private ICustomerRepo CustomerRepo { get; }
+
+        public CustomersController(ICustomerRepo customerRepo)
+        {
+            this.CustomerRepo = customerRepo;
+        }
         // GET: CustomersController
         public ActionResult Index()
         {
             return View();
         }
-
-        // GET: CustomersController/Details/5
-        public ActionResult Details(int id)
+        [HttpGet]
+        public IActionResult New()
         {
             return View();
         }
-
-        // GET: CustomersController/Create
-        public ActionResult Create()
+        [HttpPost]
+        public IActionResult New(CustomerViewModel C)
         {
-            return View();
+            if (ModelState.IsValid)
+            {
+                this.CustomerRepo.Create(C);
+                return RedirectToAction("Index");
+            }
+            return View(C);
         }
+        public IActionResult Details(int id) => View(this.CustomerRepo.GetById(id));
 
-        // POST: CustomersController/Create
+        public IActionResult Delete(int id)
+        {
+            this.CustomerRepo.Delete(id);
+            return RedirectToAction("Index");
+        }
+        public IActionResult All() => View(this.CustomerRepo.GetAll());
+
+        [HttpGet]
+        public IActionResult Edit(int id) => View(this.CustomerRepo.GetById(id));
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public IActionResult Edit(int id, CustomerViewModel customer)
         {
-            try
+            if (ModelState.IsValid)
             {
-                return RedirectToAction(nameof(Index));
+                CustomerRepo.Update(id, customer);
+                return RedirectToAction("Index");
             }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: CustomersController/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: CustomersController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: CustomersController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: CustomersController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            return View(customer);
         }
     }
 }

@@ -9,7 +9,7 @@ namespace WebApplication1.Repos
         public void Create(Employee _Employee);
         public Employee Update(int id, Employee _Employee);
         public void Delete(int id);
-
+        public void Save();
 
 
     }

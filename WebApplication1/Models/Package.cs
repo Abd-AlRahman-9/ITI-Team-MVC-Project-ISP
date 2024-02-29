@@ -10,8 +10,8 @@ namespace WebApplication1.Models
         public decimal Price { get; set; }
 
         [ForeignKey("ServiceProvider")]
-        public int ProviderId { get; set; }
+        public int? ProviderId { get; set; }
         public InternetServiceProvider? ServiceProvider { get; set; }
-        public List<Offer> Packages { get; set; } = new List<Offer>();
+        public List<Offer> Offers { get; set; } = new List<Offer>();
     }
 }

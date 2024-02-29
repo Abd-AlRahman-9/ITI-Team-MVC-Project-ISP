@@ -11,7 +11,6 @@ namespace WebApplication1.Controllers
         // GET: CustomersController
 
         private IEmployeeRebo EmpRebo;
-        private EmployeeRebo Empclass;
 
         public EmployeesController(IEmployeeRebo _EmpRebo)
         {
