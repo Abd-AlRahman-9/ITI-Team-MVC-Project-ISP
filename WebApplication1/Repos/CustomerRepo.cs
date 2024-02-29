@@ -52,5 +52,20 @@ namespace WebApplication1.Repos
             context.Customers.Update(C);
             context.SaveChanges();
         }
+
+        public List<string> PackegesNames(int id)
+        {
+            return context.Packages.Where(p => p.ProviderId == id).Select(p => p.Name).ToList();
+        }
+
+        public List<string> OffersNames(int id)
+        {
+            return context.Offers.Where(p => p.PackageId == id).Select(p => p.Name).ToList();
+        }
+
+        public List<string> ServiceProvidorNames()
+        {
+            return context.ServiceProviders.Select(p => p.Name).ToList();
+        }
     }
 }
