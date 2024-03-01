@@ -13,7 +13,7 @@ namespace WebApplication1.Repos
             this.context = _context;
         }
 
-        public List<Branch> GetAll() => context.Branches.ToList();
+        public List<Branch> GetAll() => context.Branches.Select(b => new Branch { Address = b.Address, Fax = b.Fax, Governate=b.Governate, ManagerName= b.ManagerName, Name= b.Name}).ToList();
 
         public Branch GetById(int id) => context.Branches.FirstOrDefault(B => B.Id == id);
         public List<string> getGovernates () => context.Branches.Select(B => B.Governate).ToList();
@@ -29,7 +29,7 @@ namespace WebApplication1.Repos
             context.SaveChanges();
         }
 
-        public Branch Update(int Id,BranchViewModel _Branch)
+        public Branch Update(int Id,Branch _Branch)
         {
             Branch branch = context.Branches.Find(Id);
             branch.Name = _Branch.Name;

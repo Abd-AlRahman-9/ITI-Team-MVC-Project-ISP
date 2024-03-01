@@ -16,12 +16,13 @@ namespace WebApplication1.Controllers
         // GET: CustomersController
         public ActionResult Index()
         {
-            return View();
+            return View(this.BranchRepo.GetAll());
         }
         [HttpGet]
         public IActionResult New()
         {
-            return View(BranchRepo.getGovernates());
+            ViewBag.branches = BranchRepo.getGovernates();
+            return View();
         }
         [HttpPost]
         public IActionResult New(BranchViewModel B)
@@ -40,13 +41,12 @@ namespace WebApplication1.Controllers
             this.BranchRepo.Delete(id);
             return RedirectToAction("Index");
         }
-        public IActionResult All() => View(this.BranchRepo.GetAll());
 
         [HttpGet]
         public IActionResult Edit(int id) => View(this.BranchRepo.GetById(id));
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(int id, BranchViewModel branch)
+        public IActionResult Edit(int id, Branch branch)
         {
             if (ModelState.IsValid)
             {

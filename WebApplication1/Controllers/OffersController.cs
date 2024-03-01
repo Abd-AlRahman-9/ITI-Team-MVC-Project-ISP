@@ -68,9 +68,19 @@ namespace WebApplication1.Controllers
         // GET: CustomersController/Edit/5
         public ActionResult Edit(int id)
         {
+
             Offer offer = OffersRepo.GetById(id);
+
             offer.Package = PackageRepo.GetById(id);
-            return View(offer);
+            OffersViewModel offersViewModel = new OffersViewModel()
+            {
+                OfferName = offer.Name,
+                Discount = offer.Discount,
+                PackageId = (int)offer.PackageId,
+                Duration = offer.Duration,
+                Cancel = offer.Cancel
+            };
+            return View(offersViewModel);
         }
 
         // POST: CustomersController/Edit/5

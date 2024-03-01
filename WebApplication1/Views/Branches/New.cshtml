@@ -1,5 +1,8 @@
 ﻿@using WebApplication1.ViewModels
 @model BranchViewModel
+@{
+    SelectList selectListItems = new SelectList(ViewBag.branches, "Id", "Name");
+}
 <h3 class=" ">New Branch</h3>
 
 <div class="container">
@@ -34,15 +37,15 @@
                 <input asp-for="Fax" class="form form-control" />
                 <span asp-validation-for="Fax" class="text-danger"></span>
             </div>
-            @*
+            
             <div>
-            <label asp-for="ServiceProvider"></label>
+            <label asp-for="Governate"></label>
 
-            <select asp-for="ServiceProvider" asp-items="" class="form form-control">
+                <select asp-for="Governate" asp-items="selectListItems" class="form form-control">
             <option value="0"> --Select ServiceProvider-- </option>
             </select>
-            <span asp-validation-for="ServiceProvider" class="text-danger"></span>
-            </div> *@
+                <span asp-validation-for="Governate" class="text-danger"></span>
+            </div>
 
             <input class="mt-3 btn btn-info text-white" type="submit" value="create" />
         </form>
@@ -56,3 +59,20 @@
 <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
 <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
 
+
+
+
+@* <h3 class="text-center pt-4">
+    BRANCHES <i class="fas fa-code-branch"></i>
+</h3>
+<div class="container py-5">
+    <div class="row">
+        <div class=" d-flex justify-content-center align-items-center">
+            <button class="btn"><a href="/Branches/new" class=" text-decoration-none fw-bold btn btn-outline-primary"> ADD </a> </button>
+            <button class="btn"><a href="" class=" text-decoration-none fw-bold btn btn-outline-warning"> Update </a> </button>
+            <button class="btn"><a href="" class=" text-decoration-none fw-bold btn btn-outline-danger"> Delete </a> </button>
+            <button class="btn"><a href="" class=" text-decoration-none fw-bold btn btn-outline-info"> View </a> </button>
+
+        </div>
+    </div>
+</div> *@
