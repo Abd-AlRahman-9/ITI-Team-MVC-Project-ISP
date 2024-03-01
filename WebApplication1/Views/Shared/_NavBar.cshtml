@@ -26,8 +26,19 @@
                         <a class="nav-link text-dark" asp-area="" asp-controller="Packages" asp-action="index">Packages</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Offers</a>
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Offers" asp-action="index">Offers</a>
                     </li>
+                    @* ---------------------------------------------------------------------------- *@
+                    @if (User.IsInRole("Admin")){
+                        <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Roles" asp-action="Create">Add Role</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Roles" asp-action="AddAdmin">New Admin</a>
+                    </li>
+                    }
+                    
                 </ul>
             </div>
         </div>

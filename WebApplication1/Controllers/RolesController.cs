@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace WebApplication1.Controllers
 {
-    //[Authorize(Roles ="Admin")]
+    [Authorize(Roles ="Admin")]
     public class RolesController : Controller
     {
         readonly ISPContext context;
@@ -71,7 +71,7 @@ namespace WebApplication1.Controllers
                 {
                  var role=  await userManager.AddToRoleAsync(applicationUser, "Admin");
                    await signInManager.SignInAsync(applicationUser, true);
-                    return RedirectToAction();
+                    return RedirectToAction("Index","Customers");
                 }
                 else
                 {

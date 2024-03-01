@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Cryptography.Xml;
 using WebApplication1.Models;
@@ -36,8 +37,9 @@ namespace WebApplication1.Controllers
                 if(user.Succeeded)
                 {
                     //create cookies==> username,password,email,role
-                 //var mohammed=  await _userManager.AddToRoleAsync(applicationUser, "User");
+                 var mohammed=  await _userManager.AddToRoleAsync(applicationUser, "Empolyee");
                 await _signInManager.SignInAsync(applicationUser, false);
+                    return RedirectToAction("Index", "Customers");
                 }
                 else
                 {
@@ -50,6 +52,7 @@ namespace WebApplication1.Controllers
             }
             return View(registerViewModel);
         }
+        [Authorize(Roles ="Empolyee,Admin")]
         [HttpGet]
         public IActionResult Login()
         {
@@ -69,7 +72,7 @@ namespace WebApplication1.Controllers
                     {
                         // if user check remember me box(true),then will save cookie
                         await _signInManager.SignInAsync(userName, logInViewModel.RememberMe);
-                        return RedirectToAction("Register");
+                        return RedirectToAction("Index", "Customers");
                     }
                 }
                  ModelState.AddModelError("", "Invalid user name or password");
