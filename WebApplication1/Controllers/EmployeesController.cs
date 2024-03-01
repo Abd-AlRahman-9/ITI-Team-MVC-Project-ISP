@@ -1,31 +1,52 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.DotNet.Scaffolding.Shared;
+using WebApplication1.Models;
+using WebApplication1.Repos;
+using WebApplication1.ViewModels;
 
 namespace WebApplication1.Controllers
 {
     public class EmployeesController : Controller
     {
         // GET: CustomersController
+
+        private IEmployeeRebo EmpRebo;
+
+        public EmployeesController(IEmployeeRebo _EmpRebo)
+        {
+            this.EmpRebo = _EmpRebo;    
+        }
+       
         public ActionResult Index()
         {
-            return View();
+            var All= EmpRebo.GetAll();  
+            return View(All);
         }
 
         // GET: CustomersController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+
+            var _EmpRebos = EmpRebo.GetById(id);
+
+
+            return View(_EmpRebos);
         }
 
         // GET: CustomersController/Create
+
+
+        [HttpGet]
         public ActionResult Create()
         {
+            //open form only
             return View();
         }
 
         // POST: CustomersController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(EmpolyeesViewModel EmpViewModel)
         {
             try
             {
@@ -35,48 +56,51 @@ namespace WebApplication1.Controllers
             {
                 return View();
             }
+
+            if (ModelState.IsValid)
+            {
+                Employee Emp = new Employee();
+                Emp.Name = EmpViewModel.UserName;
+                
+                return RedirectToAction("Index");
+            }
+
+
+
+            return View(EmpViewModel);
         }
 
         // GET: CustomersController/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+           var EmpED = EmpRebo.GetById(id);
+            return View(EmpED);
         }
 
         // POST: CustomersController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(int id, Employee _Employee)
         {
-            try
+            if (ModelState.IsValid)
             {
-                return RedirectToAction(nameof(Index));
+                var Emp = EmpRebo.Update(id,_Employee);
+                return RedirectToAction("Index");
+
+
             }
-            catch
-            {
-                return View();
-            }
+            return View(_Employee);
+           
         }
 
         // GET: CustomersController/Delete/5
-        public ActionResult Delete(int id)
+     
+        public IActionResult Delete(int id)
         {
-            return View();
+            EmpRebo.Delete(id);
+            return RedirectToAction("Index");
         }
 
-        // POST: CustomersController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
+
     }
 }
