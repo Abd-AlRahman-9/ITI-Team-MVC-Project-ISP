@@ -1,58 +1,62 @@
 ﻿@model WebApplication1.ViewModels.OffersViewModel
 
-@{
-    ViewData["Title"] = "Edit";
-}
 
-<h1>Edit</h1>
+<div class="container py-5">
 
-<h4>OffersViewModel</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="OfferName" class="control-label"></label>
-                <input asp-for="OfferName" class="form-control" />
-                <span asp-validation-for="OfferName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PackageId" class="control-label"></label>
-                <input asp-for="PackageId" class="form-control" />
-                <span asp-validation-for="PackageId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Duration" class="control-label"></label>
-                <input asp-for="Duration" class="form-control" />
-                <span asp-validation-for="Duration" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Discount" class="control-label"></label>
-                <input asp-for="Discount" class="form-control" />
-                <span asp-validation-for="Discount" class="text-danger"></span>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="Percentage" /> @Html.DisplayNameFor(model => model.Percentage)
-                </label>
-            </div>
-            <div class="form-group">
-                <label asp-for="Cancel" class="control-label"></label>
-                <input asp-for="Cancel" class="form-control" />
-                <span asp-validation-for="Cancel" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
+
+
+    <h2 style="color:teal">Edit @Model.OfferName</h2>
+
+    <div class="row py-3">
+        <div class="col-md-4">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="OfferName" class="control-label"></label>
+                    <input asp-for="OfferName" class="form-control" />
+                    <span asp-validation-for="OfferName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PackageId" class="control-label"></label>
+                    <input asp-for="PackageId" class="form-control" />
+                    <span asp-validation-for="PackageId" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Duration" class="control-label"></label>
+                    <input asp-for="Duration" class="form-control" />
+                    <span asp-validation-for="Duration" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Discount" class="control-label"></label>
+                    <input asp-for="Discount" class="form-control" />
+                    <span asp-validation-for="Discount" class="text-danger"></span>
+                </div>
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="Percentage" /> @Html.DisplayNameFor(model => model.Percentage)
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Cancel" class="control-label"></label>
+                    <input asp-for="Cancel" class="form-control" />
+                    <span asp-validation-for="Cancel" class="text-danger"></span>
+                </div>
+                <div class="form-group d-flex justify-content-center align-items-center">
+                    <input type="submit" value="Save" class="btn btn-primary my-3 me-2" />
+                    <div>
+                        <a class="btn btn-dark" asp-action="Index">Back to List</a>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
-</div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+   
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+    @section Scripts {
+        @{
+            await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        }
+    }
+
+</div>

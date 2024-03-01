@@ -37,7 +37,7 @@ namespace WebApplication1.Controllers
                 if(user.Succeeded)
                 {
                     //create cookies==> username,password,email,role
-                 var mohammed=  await _userManager.AddToRoleAsync(applicationUser, "Empolyee");
+                 //var mohammed=  await _userManager.AddToRoleAsync(applicationUser, "Empolyee");
                 await _signInManager.SignInAsync(applicationUser, false);
                     return RedirectToAction("Index", "Customers");
                 }
@@ -52,7 +52,6 @@ namespace WebApplication1.Controllers
             }
             return View(registerViewModel);
         }
-        [Authorize(Roles ="Empolyee,Admin")]
         [HttpGet]
         public IActionResult Login()
         {

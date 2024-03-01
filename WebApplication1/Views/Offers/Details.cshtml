@@ -1,54 +1,54 @@
 ﻿@model WebApplication1.Models.Offer
 
-@{
-    ViewData["Title"] = "Details";
-}
+<div class="container py-5">
 
-<h1>Details</h1>
 
-<div>
-    <h4>Offer</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Id)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Duration)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Duration)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Discount)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Discount)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Cancel)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Cancel)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.PackageId)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.PackageId)
-        </dd>
-    </dl>
+    <h1 class="text-danger">Details  about @Model.Name</h1>
+
+    <div>
+      
+        <dl class="row py-4">
+
+            <dt class="col-sm-2 main-text">
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+            <dt class="col-sm-2 main-text">
+                @Html.DisplayNameFor(model => model.Duration)
+            </dt>
+            <dd class="col-sm-10 ">
+                @Html.DisplayFor(model => model.Duration)
+            </dd>
+            <dt class="col-sm-2 main-text">
+                @Html.DisplayNameFor(model => model.Discount)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Discount)
+            </dd>
+            <dt class="col-sm-2 main-text">
+                @Html.DisplayNameFor(model => model.Cancel)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Cancel)
+            </dd>
+            <dt class="col-sm-2 main-text">
+                @Html.DisplayNameFor(model => model.PackageId)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.PackageId)
+            </dd>
+        </dl>
+    </div>
+    <div>
+
+        <button class="btn"><a href="/Offers/edit/@Model.Id" class=" text-decoration-none fw-bold btn btn-outline-info me-2"> Update </a> </button>
+
+        <a  class="btn btn-dark" asp-action="Index">Back to List</a>
+    </div>
+
+
 </div>
-<div>
-    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
-    <a asp-action="Index">Back to List</a>
-</div>
+
+

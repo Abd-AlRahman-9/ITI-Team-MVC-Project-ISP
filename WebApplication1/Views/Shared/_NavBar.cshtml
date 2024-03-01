@@ -8,38 +8,69 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                <ul class="navbar-nav flex-grow-1">
+                <ul class="navbar-nav flex-grow-1 px-3">
                     <li class="nav-item">
                         <a  class="nav-link text-dark active" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Employees" asp-action="index">Employees</a>
-                    </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Customers" asp-action="index">Customers</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Branches" asp-action="index">Branches</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Packages" asp-action="index">Packages</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Offers" asp-action="index">Offers</a>
-                    </li>
-                    @* ---------------------------------------------------------------------------- *@
-                    @if (User.IsInRole("Admin")){
+                    @if (User.Identity.IsAuthenticated)
+                    {
                         <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Roles" asp-action="Create">Add Role</a>
-                    </li>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Employees" asp-action="index">Employees</a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Roles" asp-action="AddAdmin">New Admin</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Customers" asp-action="index">Customers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Branches" asp-action="index">Branches</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Packages" asp-action="index">Packages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Offers" asp-action="index">Offers</a>
+                        </li>
+                        @* ---------------------------------------------------------------------------- *@
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Roles" asp-action="Create">Add Role</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Roles" asp-action="AddAdmin">New Admin</a>
+                            </li>
+                        }
+
+                        
                     }
+                   
+                    <div class="ms-auto d-flex justify-content-center align-items-center">
+                        @if(!User.Identity.IsAuthenticated)
+                        {
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Accounts" asp-action="Register">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Accounts" asp-action="Login">Login</a>
+                        </li>
+                            
+                        }else{
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Accounts" asp-action="Logout">LogOut</a>
+                        </li>
+
+                        }
+                    </div>
+                 
                     
                 </ul>
+
+                
+
+
             </div>
         </div>
     </nav>
