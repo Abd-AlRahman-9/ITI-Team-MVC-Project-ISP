@@ -1,0 +1,28 @@
+﻿@* @using WebApplication1.Models
+@model Employee
+
+
+
+<title>Delete Confirmation:@Html.DisplayFor(Model => Model.Name)</title>
+
+
+
+<h2>Delete Confirmation</h2>
+
+<div>
+    <p>
+        Please confirm you want to delete course titled:
+        <i>@Html.DisplayFor(Model => Model.Name)</i>
+
+    </p>
+</div>
+
+<form asp-action="Delete" asp-controller="Employees" asp-route-id="@Model.Id" method="post">
+    <input name="confirmButton" type="submit" value="Delete" />
+
+
+    <a asp-controller="CourseNew" asp-action="Show" class="btn btn-secondary">Cancel</a>
+</form>
+ *@
+
+

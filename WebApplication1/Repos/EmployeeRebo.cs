@@ -1,8 +1,9 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using WebApplication1.Models;
 
 namespace WebApplication1.Repos
-{
+{ 
     public class EmployeeRebo : IEmployeeRebo
     {
      
@@ -20,7 +21,8 @@ namespace WebApplication1.Repos
         public List<Employee> GetAll()
         {
 
-            return context.Employees.ToList();
+
+            return context.Employees.Include(e=>e.Branch).ToList();
 
         }
 
@@ -34,14 +36,17 @@ namespace WebApplication1.Repos
         {
             context.Add(_Employee);
             Save();
+           
 
         }
 
         public Employee Update(int id, Employee _Employee)
         {
              context.Update(_Employee);
+              Save();
             return _Employee;
-            Save();
+
+           
 
         }
 

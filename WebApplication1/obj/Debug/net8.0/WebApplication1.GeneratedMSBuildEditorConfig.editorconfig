@@ -17,79 +17,123 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WebApplication1
 build_property.RootNamespace = WebApplication1
-build_property.ProjectDir = C:\Users\hp\Desktop\ISPSystem\WebApplication1\
+build_property.ProjectDir = C:\Users\Hager\Documents\project mvc\ITI-Team-MVC-Project-ISP\WebApplication1\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\hp\Desktop\ISPSystem\WebApplication1
+build_property.MSBuildProjectDirectory = C:\Users\Hager\Documents\project mvc\ITI-Team-MVC-Project-ISP\WebApplication1
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/hp/Desktop/ISPSystem/WebApplication1/Views/Accounts/Index.cshtml]
+[C:/Users/Hager/Documents/project mvc/ITI-Team-MVC-Project-ISP/WebApplication1/Views/Accounts/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp/Desktop/ISPSystem/WebApplication1/Views/Accounts/LogIn.cshtml]
+[C:/Users/Hager/Documents/project mvc/ITI-Team-MVC-Project-ISP/WebApplication1/Views/Accounts/LogIn.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcTG9nSW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp/Desktop/ISPSystem/WebApplication1/Views/Home/Index.cshtml]
+[C:/Users/Hager/Documents/project mvc/ITI-Team-MVC-Project-ISP/WebApplication1/Views/Branches/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmNoZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Hager/Documents/project mvc/ITI-Team-MVC-Project-ISP/WebApplication1/Views/Branches/New.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmNoZXNcTmV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Hager/Documents/project mvc/ITI-Team-MVC-Project-ISP/WebApplication1/Views/Customers/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Hager/Documents/project mvc/ITI-Team-MVC-Project-ISP/WebApplication1/Views/Customers/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Hager/Documents/project mvc/ITI-Team-MVC-Project-ISP/WebApplication1/Views/Customers/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Hager/Documents/project mvc/ITI-Team-MVC-Project-ISP/WebApplication1/Views/Customers/New.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJzXE5ldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Hager/Documents/project mvc/ITI-Team-MVC-Project-ISP/WebApplication1/Views/Employees/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Hager/Documents/project mvc/ITI-Team-MVC-Project-ISP/WebApplication1/Views/Employees/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Hager/Documents/project mvc/ITI-Team-MVC-Project-ISP/WebApplication1/Views/Employees/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Hager/Documents/project mvc/ITI-Team-MVC-Project-ISP/WebApplication1/Views/Employees/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Hager/Documents/project mvc/ITI-Team-MVC-Project-ISP/WebApplication1/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp/Desktop/ISPSystem/WebApplication1/Views/Home/Privacy.cshtml]
+[C:/Users/Hager/Documents/project mvc/ITI-Team-MVC-Project-ISP/WebApplication1/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp/Desktop/ISPSystem/WebApplication1/Views/Offers/OfferPageView.cshtml]
+[C:/Users/Hager/Documents/project mvc/ITI-Team-MVC-Project-ISP/WebApplication1/Views/Offers/OfferPageView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2ZmZXJzXE9mZmVyUGFnZVZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp/Desktop/ISPSystem/WebApplication1/Views/Packages/packageView.cshtml]
+[C:/Users/Hager/Documents/project mvc/ITI-Team-MVC-Project-ISP/WebApplication1/Views/Packages/packageView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFja2FnZXNccGFja2FnZVZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp/Desktop/ISPSystem/WebApplication1/Views/Roles/AddAdmin.cshtml]
+[C:/Users/Hager/Documents/project mvc/ITI-Team-MVC-Project-ISP/WebApplication1/Views/Roles/AddAdmin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcQWRkQWRtaW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp/Desktop/ISPSystem/WebApplication1/Views/Roles/Create.cshtml]
+[C:/Users/Hager/Documents/project mvc/ITI-Team-MVC-Project-ISP/WebApplication1/Views/Roles/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp/Desktop/ISPSystem/WebApplication1/Views/Roles/Index.cshtml]
+[C:/Users/Hager/Documents/project mvc/ITI-Team-MVC-Project-ISP/WebApplication1/Views/Roles/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp/Desktop/ISPSystem/WebApplication1/Views/ServiceProviders/Index.cshtml]
+[C:/Users/Hager/Documents/project mvc/ITI-Team-MVC-Project-ISP/WebApplication1/Views/ServiceProviders/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVByb3ZpZGVyc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp/Desktop/ISPSystem/WebApplication1/Views/Shared/Error.cshtml]
+[C:/Users/Hager/Documents/project mvc/ITI-Team-MVC-Project-ISP/WebApplication1/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp/Desktop/ISPSystem/WebApplication1/Views/Shared/Register.cshtml]
+[C:/Users/Hager/Documents/project mvc/ITI-Team-MVC-Project-ISP/WebApplication1/Views/Shared/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFJlZ2lzdGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp/Desktop/ISPSystem/WebApplication1/Views/Shared/_NavBar.cshtml]
+[C:/Users/Hager/Documents/project mvc/ITI-Team-MVC-Project-ISP/WebApplication1/Views/Shared/_advancLayOut.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9hZHZhbmNMYXlPdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Hager/Documents/project mvc/ITI-Team-MVC-Project-ISP/WebApplication1/Views/Shared/_NavBar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9OYXZCYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp/Desktop/ISPSystem/WebApplication1/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Hager/Documents/project mvc/ITI-Team-MVC-Project-ISP/WebApplication1/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp/Desktop/ISPSystem/WebApplication1/Views/_ViewImports.cshtml]
+[C:/Users/Hager/Documents/project mvc/ITI-Team-MVC-Project-ISP/WebApplication1/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp/Desktop/ISPSystem/WebApplication1/Views/_ViewStart.cshtml]
+[C:/Users/Hager/Documents/project mvc/ITI-Team-MVC-Project-ISP/WebApplication1/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp/Desktop/ISPSystem/WebApplication1/Views/Shared/_Layout.cshtml]
+[C:/Users/Hager/Documents/project mvc/ITI-Team-MVC-Project-ISP/WebApplication1/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-bddmc6yalx

@@ -1,0 +1,50 @@
+﻿@using WebApplication1.Models
+@model List<Employee>
+<h3 class="text-center pt-4">HELLO EMPLOYEES <i class="fas fa-users"></i> </h3>
+<div class="container py-5">
+    <div class="row">
+        <div class=" d-flex justify-content-center align-items-center">
+            <button class="btn"><a href="/employees/create" class=" text-decoration-none fw-bold btn btn-outline-primary"> ADD </a> </button>
+            <button class="btn"><a href="" class=" text-decoration-none fw-bold btn btn-outline-info"> View </a> </button>
+
+        </div>
+    </div>
+</div>
+
+
+
+   <table class="table table-striped text-center border" >
+    <thead>
+        <tr>
+            <th> Name</th>
+                <th>Address </th>
+                <th>Email </th>
+                <th>Phone </th>
+              <th>BranchName </th>
+              <th>Action </th>
+
+            </tr>
+    </thead>
+    <tbody>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Address</td>
+                    <td>@item.Email</td>
+                <td>@item.Phone</td>
+                 <td>@item.Branch?.Name</td>
+                <td></td>
+                <td>
+                    <button class="btn"><a href="/Employees/edit/@item.Id" class=" text-decoration-none fw-bold btn btn-outline-warning me-2"> Update </a> </button>
+                    <button class="btn"><a href="/Employees/Delete/@item.Id" class=" text-decoration-none fw-bold btn btn-outline-danger"> Delete </a> </button>
+
+                </td>
+                  
+                 
+                </tr>
+            }
+       
+    </tbody>
+    </table>

@@ -8351,19 +8351,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\hp\\.nuget\\packages\\": {}
+    "C:\\Users\\Hager\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hp\\Desktop\\ISPSystem\\WebApplication1\\WebApplication1.csproj",
+      "projectUniqueName": "C:\\Users\\Hager\\Documents\\project mvc\\ITI-Team-MVC-Project-ISP\\WebApplication1\\WebApplication1.csproj",
       "projectName": "WebApplication1",
-      "projectPath": "C:\\Users\\hp\\Desktop\\ISPSystem\\WebApplication1\\WebApplication1.csproj",
-      "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hp\\Desktop\\ISPSystem\\WebApplication1\\obj\\",
+      "projectPath": "C:\\Users\\Hager\\Documents\\project mvc\\ITI-Team-MVC-Project-ISP\\WebApplication1\\WebApplication1.csproj",
+      "packagesPath": "C:\\Users\\Hager\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Hager\\Documents\\project mvc\\ITI-Team-MVC-Project-ISP\\WebApplication1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Hager\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8440,13 +8440,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\hp\\Desktop\\ISPSystem\\WebApplication1\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }

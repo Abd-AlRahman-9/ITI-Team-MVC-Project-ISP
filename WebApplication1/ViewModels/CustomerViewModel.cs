@@ -1,4 +1,6 @@
-﻿namespace WebApplication1.ViewModels
+﻿using WebApplication1.Models;
+
+namespace WebApplication1.ViewModels
 {
     public class CustomerViewModel
     {
@@ -6,11 +8,15 @@
         public string Adress { get; set; }
         public string Phone { get; set; }
         //list of string
-        public string ServiceProvider { get; set; }
+
+        public int? PackageId { get; set; }
+        public int? OfferId { get; set; }
+        public int? ProviderId { get; set; }
+        public List<InternetServiceProvider> ServiceProvider { get; set; }
         // list of string
-        public string Package { get; set; }
+        public List<Package> Package { get; set; }
         //list of string
-        public string Offer { get; set; }
+        public List<Offer> Offer { get; set; }
 
     }
 }

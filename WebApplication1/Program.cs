@@ -31,6 +31,8 @@ namespace WebApplication1
             builder.Services.AddScoped<IBranchRepo,BranchRepo>();
             builder.Services.AddScoped<IEmployeeRebo, EmployeeRebo>();
             builder.Services.AddScoped<ICustomerRepo, CustomerRepo>();
+            builder.Services.AddScoped<IPackageRepo, PackageRepo>();
+            builder.Services.AddScoped<IOffersRepo, OffersRepo>();
 
             var app = builder.Build();
 

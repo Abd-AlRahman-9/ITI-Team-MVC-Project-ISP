@@ -11,15 +11,18 @@ namespace WebApplication1.Controllers
         // GET: CustomersController
 
         private IEmployeeRebo EmpRebo;
+        private IBranchRepo BranchRepo;
 
-        public EmployeesController(IEmployeeRebo _EmpRebo)
+        public EmployeesController(IEmployeeRebo _EmpRebo,IBranchRepo branchRepo)
         {
             this.EmpRebo = _EmpRebo;    
+            this.BranchRepo = branchRepo;
         }
        
         public ActionResult Index()
         {
-            var All= EmpRebo.GetAll();  
+            var All= EmpRebo.GetAll();
+
             return View(All);
         }
 
@@ -40,40 +43,71 @@ namespace WebApplication1.Controllers
         public ActionResult Create()
         {
             //open form only
+            ViewBag.branchlist = BranchRepo.GetAll();
             return View();
         }
 
         // POST: CustomersController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(EmpolyeesViewModel EmpViewModel)
+        //public ActionResult Create(E Emp)
+        //{
+        //    try
+        //    {
+        //        return RedirectToAction(nameof(Index));
+        //    }
+        //    catch
+        //    {
+        //        return View();
+        //    }
+
+        //    if (ModelState.IsValid)
+        //    {
+        //        Employee Emp = new Employee();
+        //        Emp.Name = EmpViewModel.UserName;
+                
+        //        return RedirectToAction("Index");
+        //    }
+
+
+
+        //    return View(EmpViewModel);
+        //}
+
+
+
+
+
+
+        public ActionResult Create(Employee Emp)
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                if (ModelState.IsValid)
+                {
+
+                   EmpRebo.Create(Emp);
+
+                    EmpRebo.Save();
+
+                    return RedirectToAction("Index");
+                }
+                //  return RedirectToAction(nameof(Index));
             }
-            catch
+            catch (Exception ex)
             {
-                return View();
+                ModelState.AddModelError("", "checkerror");
+
             }
-
-            if (ModelState.IsValid)
-            {
-                Employee Emp = new Employee();
-                Emp.Name = EmpViewModel.UserName;
-                
-                return RedirectToAction("Index");
-            }
-
-
-
-            return View(EmpViewModel);
+            return View(Emp);
         }
 
         // GET: CustomersController/Edit/5
         public ActionResult Edit(int id)
         {
            var EmpED = EmpRebo.GetById(id);
+            ViewBag.branchlist = BranchRepo.GetAll();
+
             return View(EmpED);
         }
 
@@ -85,10 +119,10 @@ namespace WebApplication1.Controllers
             if (ModelState.IsValid)
             {
                 var Emp = EmpRebo.Update(id,_Employee);
+                EmpRebo.Save();
                 return RedirectToAction("Index");
-
-
             }
+
             return View(_Employee);
            
         }

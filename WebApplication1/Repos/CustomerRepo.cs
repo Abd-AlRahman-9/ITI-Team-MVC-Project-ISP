@@ -1,4 +1,5 @@
-﻿using NuGet.Protocol;
+﻿using Microsoft.EntityFrameworkCore;
+using NuGet.Protocol;
 using WebApplication1.Models;
 using WebApplication1.ViewModels;
 
@@ -14,7 +15,7 @@ namespace WebApplication1.Repos
             this.context = _context;
         }
 
-        public List<Customer> GetAll() => context.Customers.Where(C=>C.IsDeleted==false).ToList();
+        public List<Customer> GetAll() => context.Customers.Include(c=>c.Branch).Include(c=>c.Package).Where(C=>C.IsDeleted==false).ToList();
 
         public Customer GetById(int id) => context.Customers.FirstOrDefault(B => B.Id == id);
         public void Create(CustomerViewModel _Customer)
@@ -23,7 +24,7 @@ namespace WebApplication1.Repos
             {
                 Address = _Customer.Adress,
                 Phone = _Customer.Phone,
-                PackageId = context.Packages.Where(P=>P.Name == _Customer.Package).ToList()[0].Id,
+                //PackageId = context.Packages.Where(P=>P.Name == _Customer.Package).ToList()[0].Id,
                 IsDeleted = false,
                 Name = _Customer.Name
             };
@@ -39,7 +40,7 @@ namespace WebApplication1.Repos
             customer.Address = _Customer.Adress;
             customer.IsDeleted = false;
             customer.Phone = _Customer.Phone;
-            customer.PackageId = context.Packages.Where(P=>P.Name == _Customer.Package).ToList()[0].Id;
+            customer.PackageId = _Customer.PackageId;
             context.Customers.Update(customer);
             context.SaveChanges();
             return customer;
