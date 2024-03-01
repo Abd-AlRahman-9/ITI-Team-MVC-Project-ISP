@@ -8,22 +8,36 @@ namespace WebApplication1.Controllers
     public class CustomersController : Controller
     {
         private ICustomerRepo CustomerRepo { get; }
+        private IPackageRepo PackageRepo { get; }
+        private IBranchRepo BranchRepo { get; }
+        private IOffersRepo offersRepo { get; }
+        private IServiceProviderRepo ServiceProviderRepo { get; }
 
-        public CustomersController(ICustomerRepo customerRepo)
+        public CustomersController(ICustomerRepo customerRepo, IBranchRepo branchRepo , IPackageRepo packageRepo , IOffersRepo offersRepo , IServiceProviderRepo serviceProviderRepo)
         {
             this.CustomerRepo = customerRepo;
+            //this.BranchRepo = branchRepo;
+            this.PackageRepo = packageRepo;
+            this.offersRepo = offersRepo;
+            this.ServiceProviderRepo = serviceProviderRepo; 
+
         }
         // GET: CustomersController
         public ActionResult Index()
         {
-            return View();
+           
+            var customers = CustomerRepo.GetAll();
+            return View(customers);
         }
         [HttpGet]
-        public IActionResult New(int? id)
+        public IActionResult New()
         {
-            if(id==null)
-            return View(CustomerRepo.ServiceProvidorNames());
-            else return View(CustomerRepo.PackegesNames(id.Value));
+            ViewBag.packagelist = PackageRepo.GetAll();
+            ViewBag.servicelist = ServiceProviderRepo.GetAll();
+
+
+
+            return View();
         }
         [HttpPost]
         public IActionResult New(CustomerViewModel C)
@@ -45,7 +59,25 @@ namespace WebApplication1.Controllers
         public IActionResult All() => View(this.CustomerRepo.GetAll());
 
         [HttpGet]
-        public IActionResult Edit(int id) => View(this.CustomerRepo.GetById(id));
+        public  IActionResult Edit(int id)
+        {
+            var customer = CustomerRepo.GetById(id);
+            CustomerViewModel customerViewModel = new CustomerViewModel()
+            {
+                Name = customer.Name,
+                Adress = customer.Address,
+                Phone = customer.Phone,
+                //Package = customer.Package.Name,
+
+        };
+            //ViewBag.branchlist = BranchRepo.GetAll();
+            ViewBag.packagelist = PackageRepo.GetAll();
+            ViewBag.offerlist = offersRepo.GetAll();
+            ViewBag.servicelist = ServiceProviderRepo.GetAll();
+
+            return View(customerViewModel);
+
+        }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Edit(int id, CustomerViewModel customer)

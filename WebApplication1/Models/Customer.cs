@@ -12,11 +12,12 @@ namespace WebApplication1.Models
         public string Phone { get; set; }
         public bool IsDeleted { get; set; }
         [ForeignKey("Package")]
-        public int PackageId { get; set; }
+        public int? PackageId { get; set; }
         [ForeignKey("Branch")]
         public int BranchId { get; set; }
 
         public Branch? Branch { get; set; }
+
         public Package? Package { get; set; }
     }
 }
